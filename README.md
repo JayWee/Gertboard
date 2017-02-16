@@ -16,9 +16,7 @@ Eine Einführung
 <li><a href="#9">9. Nutzung der Buffer </a></li>
 </ul>
 
-<h3>
-<a id="1">1. Einleitung</a>
-</h3>
+<h3 id="1">1. Einleitung</h3>
 
 Der Raspberry Pi ist ein Mini-Computer, der vieles von dem, was ein normaler Computer auch kann: Er hat eine graphische Oberfläche1, einen Internetbrowser und andere Programme. 
 Es gibt aktuell drei Versionen des Pi, die Funktionen sind größtenteils gleich. Das neueste Modell hat auch WLAN und Bluetooth an Board.
@@ -30,9 +28,7 @@ Der Pi besitzt keine eigene interne Festplatte oder sonstigen internen Speicher.
 Es gibt zwei Betriebssysteme, die Hauptsächlich mit dem Pi benutzt werden. Vor allem ist dies Linux (Raspbian), welches eine vollständige Desktopoberfläche hat. Die Alternative ist Windows 10 IoT Core, welches allerding erst mit ab der 2 Version des Pi für diesen verfügbar ist). Dieses Betriebssystem bietet keine graphische Oberfläche, allerdings kann auf alle Funktion über ein anderen Rechner mit Windows zugegriffen werden. Ebenfalls ist es dann möglich mit [Visual Studio 2015 Community](https://www.visualstudio.com/de/), einem Compiler für diverse Sprachen(C/C#/C++/JavaScript/Visual Basic/Phython) von Microsoft, Remote-Debugging zu betreiben.
 </p>
 
-<h4>
-<a id="3">Aufsetzten von Linux</a>
-</h4>
+<h4 id="3">Aufsetzten von Linux</h4>
 
 <p>
 Als erstes muss eine Installationsdatei für Linux heruntergeladen werden, welches [hier](https://downloads.raspberrypi.org/raspbian_latest) verfügbar ist. Das letztendliche Linux nennt sich Raspbian und ist kostenlos. 
@@ -61,9 +57,7 @@ Statt `path_of_your_image.img` gibt man den Pfad der IMG Datei ein. Diese kann m
 Schlägt der Befehl fehl, kann man statt `rdisk` auch nur `disk` verwenden.
 Ist der Befehl ausgeführt, kann die SD-Karte ausgeworfen und in den Pi gesteckt werden. 
 </p>
-<h3>
-<a ref="7">Der erste Start</a>
-</h3>
+<h3 ref="7">Der erste Start</h3>
 <p>
 Jetzt steckt man die SD-Karte, auf der das Raspbian installiert ist, in den Pi, der über ein Micro-USB-Kabel mit Strom versorgt wird.  
 Nun beginnt der Pi den Startvorgang. In der Zeit sollte man ein LAN-Kabel zur Versorgung mit Internet anschließen. (die Pis der Schule müssen nur angeschlossen werden, sie haben schon Internet. Eigene Pi's müssen erst registriert werden.)
@@ -124,9 +118,7 @@ Zugreifen auf den Pi
 Dafür braucht man wieder das Programm *Windows 10 IoT Dashboard*. In diesem geht man auf den Reiter "*Meine Geräte*". Dort wird der Raspberry dann mit dem gegebenem Namen, seinem Typ und der IP-Adresse angezeigt.
 </h4>
 
-<h2>
-<a name="3">3. Erste Programme mit Phyton über Linux</a>
-</h2>
+<h2 name="3">3. Erste Programme mit Phyton über Linux</h2>
 <p>
 Es ist nun möglich Programme direkt auf dem Pi zu schreiben in dem man die Programmiersprache Python benutzt. 
 Man kann aber auch auf dem Mac, auf dem man auch das Terminal ausführt, Programme schreiben.
@@ -305,15 +297,15 @@ Ganz unten liegt J1. Dies ist die Verbindung zum Pi. Knapp dadrüber liegt J2. D
 Weiter wichtig für dieses Tutorial sind die Chips U3-U5. Dies sind die oben genannten Buffer. Ober- und Unterhalb dieser liegen jeweils 8 Pins. Diese sind zur Bestimmung des Modus (Input/Output) gedacht und deshalb mit *out* oder *in* beschrieben. Der Block J3 ist der Eingang zu den Buffern. Die Pins beschriftet mit BUF1-12 sind die Input-Eingänge der Buffer. Zusätzlich zu diesen Input-Pins ist an jeden Buffer-Pin noch eine LED geschaltet und dies ersten drei Buffer Pins (B1-3) sind mit den drei Knöpfen noch verbunden.
 Die eben schon erwähnten Dauerstrom-Pins befinden sich in den kleine Böcken J7, J27 und oben links in der Ecke nur 3V3 beschriftet. 
 
-### Nutzung der Buffer <a name="6"></a>
+<h4 name="6">Nutzung der Buffer</h4>
 
-##### Verbindung mit dem Pi
+<h4> Verbindung mit dem Pi </h4>
 Um das Gertboard mit dem Raspberry Pi zu verbinden, muss das Gertboard auf die linken (Der Pi ist so gedreht, dass die Pins oben links liegen) 26 GPIO-Pins gesteckt werden. Bei B Modelen des Pi sind somit die vierzehn rechten Pins nicht mit dem Gertboard verbunden und auf sie kann somit nicht auf dem Gertboard zugegriffen werden. Damit die Buffer-Ausgänge auch Signale senden können müssen bei J7 (3,3V Dauerstrom) zwei der drei Pins miteinander Verbunden werden (am besten mit einem [Jumper](https://github.com/JayWee/Gertboard-Tutorial/blob/master/Shunt-Jumpers2-1383815114.jpg)).    <!---(Für die, die es interessiert: [Warum hier](#10)) -->  
 
-#### Arbeiten mit den LEDs und den Druckknöpfen über die Buffer
+<h4> Arbeiten mit den LEDs und den Druckknöpfen über die Buffer </h4>
 Um auf die LEDs zuzugreifen muss erstmal eine Verbindung zwischen den GPIO-Pins (J2) und den Buffer-Eingangs-Pins (J3) hergestellt werden. Jetzt sollten alle LEDs rot leuchten.  
 Dann muss der Hardware gesagt werden wie welcher Bufferpin genutzt werden soll (Input/Output). Dafür müssen bei einem Output die beiden Pins, die mit *Bx out* (x ist die Nummer des gewählten Buffereingangs) beschriftet sind, am besten mit einem Jumper verbunden werden. Beim Aufstecken der Jumper, sollte die entsprechende LED ausgehen. Falls nicht, sollte dies spätestens beim starten des Programms passieren.  
 Um die Druckknöpfe zu verwenden, muss man über B1-3 darauf zugreifen und entgegen der Tatsache, dass es sich um einen Input handelt, auch einen Jumper bei *Bx out* plazieren (Im Programm müssen die entsprechenden GPIO-Pinsallerdings auf Input gestellt sein). Auf die LEDs der benutzten Knöpfe kann dann nicht mehr zugegriffen werden. Diese Leuchten jetzt beim Starten des Programms. Wenn dann einer der Knöpfe gedrückt wird, geht die entsprechende LED beim Gedrückt sein aus und beim Loslassen wieder an.
 
-#### Arbeiten mit externen Geräten über die Buffer
+<h4> Arbeiten mit externen Geräten über die Buffer </h4>
 Wenn mit externen Geräten oder LEDs gearbeitet werden soll, werden nicht beide *Bx out* Pins miteinander verbunden, sondern einer von diesen mit der externen LED. Alle Pins mit dem Senkrecht-Zeichen (umgedrehtes T) oder GND beschriftet sind können als Ground-Pin verwendet werden. Wenn ein Pin als Input genutzt werden soll, wird ein Jumper bei *Bx in* gesetzt und die Input-Quelle mit einem der BUF-Pins.
