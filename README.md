@@ -1,5 +1,8 @@
-# Gertboard
 # Gertboard Tutorial
+
+<h2> 
+Eine Einführung
+</h2>
 
 1. **[Einleitung](#1)**  
 1. **[Inbetriebnahme des Pi](#2)**  
@@ -11,15 +14,22 @@
   [Einführung](#5)  
   [Nutzung der Buffer](#6)  
 
-## 1. Einleitung <a name="1"> </a>
+<h3>
+<a id="1">1. Einleitun</a>
+</h3>
+
 Der Raspberry Pi ist ein Mini-Computer, der vieles von dem, was ein normaler Computer auch kann: Er hat eine graphische Oberfläche1, einen Internetbrowser und andere Programme. 
 Es gibt aktuell drei Versionen des Pi, die Funktionen sind größtenteils gleich. Das neueste Modell hat auch WLAN und Bluetooth an Board.
 
-## 2. Inbetriebnahme des Pi <a name="2"></a>
+<h3>
+<a id="2">2. Inbetriebnahme des Pi</a>
+<h3/>
 Der Pi besitzt keine eigene interne Festplatte oder sonstigen internen Speicher. Deshalb muss man ihm einen stellen. Dies geschieht in Form einer SD-Karte (ab dem Raspberry Pi 2 eine microSD-Karte) mit mindestens 8 GB Speicher (am besten Class 10, bei Windows IoT werden SD-Karten erst ab Class 4 unterstützt).  
 Es gibt zwei Betriebssysteme, die Hauptsächlich mit dem Pi benutzt werden. Vor allem ist dies Linux (Raspbian), welches eine vollständige Desktopoberfläche hat. Die Alternative ist Windows 10 IoT Core, welches allerding erst mit ab der 2 Version des Pi für diesen verfügbar ist). Dieses Betriebssystem bietet keine graphische Oberfläche, allerdings kann auf alle Funktion über ein anderen Rechner mit Windows zugegriffen werden. Ebenfalls ist es dann möglich mit [Visual Studio 2015 Community](https://www.visualstudio.com/de/), einem Compiler für diverse Sprachen(C/C#/C++/JavaScript/Visual Basic/Phython) von Microsoft, Remote-Debugging zu betreiben.
 
-### Aufsetzten von Linux <a name="7"></a>
+<h4>
+<a id="7">Aufsetzten von Linux</a>
+<h4/>
 Als erstes muss eine Installationsdatei für Linux heruntergeladen werden, welches [hier](https://downloads.raspberrypi.org/raspbian_latest) verfügbar ist. Das letztendliche Linux nennt sich Raspbian und ist kostenlos. 
 Diese liegt in Form einer einer Zip-Datei, die entpackt werden muss. Anstatt der zip-Datei hat man jetzt eine IMG-Datei. 
 Die Sd-Karte muss nun mit dem Computer verbunden werden, um die IMG-Datei drauf zu spielen. 
