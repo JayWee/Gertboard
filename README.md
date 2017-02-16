@@ -134,40 +134,40 @@ Als erstes müssen verschiedene Dinge importiert werden: Die Zeit (time), die St
 
 #### Programme schreiben 
 Der Anfang des Programmes sieht dann so aus:  
-```
+<code>
 import RPi.GPIO as GPIO  
 import time  
-```
+</code>
   
 Nun definiert man die Pins als Ausgang-Pins und den GPIO Modus:
-```
+<code>
 GPIO.setmode(GPIO.BCM)  
 GPIO.setwarnings(False)  
 GPIO.setup(18,GPIO.OUT) #LED  
-```
+</code>
 
 Um die LED zu aktivieren setzt man den output auf HIGH:
-```
+<code>
 GPIO.output(18,GPIO.HIGH)  
 time.sleep(5) #wartet fuenf Sekunden  
 GPIO.output(18,GPIO.LOW) #schaltet die LED wieder aus  
 GPIO.cleanup() #setzt die Steuerung zurueck  
-```
+</code>
 
 Mit crtl-x verlässt man den Editor: Erst *crtl-x* dann *y* und dann *Enter* drücken. Nun gibt man den Befehl `sudo phyton Test.py` ein, um das Programm auszuführen.
 
 Jetzt kann man eine Abfolge von LED leuchten erstellt:	
-```
+<code>
 GPIO.setup(17,GPIO.OUT) #rot  
 GPIO.setup(18,GPIO.OUT) #gelb   
 GPIO.setup(27,GPIO.OUT) #gruen   
 GPIO.setup(22,GPIO.OUT) #rotf  
 GPIO.setup(23,GPIO.OUT) #gruenf  
-```
+</code>
 
 Alle als output definiert und dann mittels time.sleep verschiedene Blitzlichter und Morse-Codes erstellt.  
 Beispiel SOS:   
-```
+<code>
 GPIO.output(18,GPIO.HIGH)  
 time.sleep(0.5)  
 GPIO.output(18,GPIO.LOW)  
@@ -212,17 +212,17 @@ GPIO.output(18,GPIO.HIGH)
 time.sleep(0.5)  
 GPIO.output(18,GPIO.LOW)  
 time.sleep(3.5)  
-```
+</code>
 
 Um daraus eine Schleife zu machen setzt kann man einen Counter einsetzen. Am Anfang des Programmes `count = 0` setzen und dann `while (count < x):` das sieht dann so aus:  
-```
+<code>
 count = 0  
 while (count < x):
-```
+</code>
 darunter dann den Inhalt der Schleife setzen. Diese ist jetzt unendlich. Wenn man ans Ende ein `counter += 1` setzt wird der Counter nach jeden Durchlauf um 1 erhöht und das Programm endet nach x Durchläufen. 
 
 `GPIO.setup(2,GPIO.IN)` definiert Pin 2 als Eingang. Das gegegebn kann man mit der Funktion `if GPIO.input(2) == GPIO.HIGH` und einem Schlater eine Ampel bauen. Mit `print "text"` können die einzelnen Schritte in der Konsole beschrieben werden, um ein debugging möglich machen kann.
-```
+<code>
 import RPi.GPIO as GPIO
 import time
 
@@ -269,7 +269,7 @@ while (count < 3):
         time.sleep(1)  
         counter +=1  
 GPIO.cleanup()
-```
+</code>
 
 ## 4. Gertboard <a name="4"></a>
 ![Gertboard Real](https://github.com/JayWee/Gertboard-Tutorial/blob/master/gertboard_real.png)
