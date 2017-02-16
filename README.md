@@ -30,15 +30,20 @@ Es gibt zwei Betriebssysteme, die Hauptsächlich mit dem Pi benutzt werden. Vor 
 <h4>
 <a id="7">Aufsetzten von Linux</a>
 <h4/>
+
 Als erstes muss eine Installationsdatei für Linux heruntergeladen werden, welches [hier](https://downloads.raspberrypi.org/raspbian_latest) verfügbar ist. Das letztendliche Linux nennt sich Raspbian und ist kostenlos. 
 Diese liegt in Form einer einer Zip-Datei, die entpackt werden muss. Anstatt der zip-Datei hat man jetzt eine IMG-Datei. 
 Die Sd-Karte muss nun mit dem Computer verbunden werden, um die IMG-Datei drauf zu spielen. 
 
-<!-- To Do: Pronomen ersetzten -->
-##### Windows 
+<h4>
+Windows 
 Man installiert nun das Program [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/). Die geladene Datei wird anschließend entpackt und ausgeführt. Mit Hilfe des Programmes installiert man Raspian auf dem Pi. 
+<h4/>
 
-##### Mac 
+<h4>
+Mac
+<h4/>
+
 Falls man Raspian mit einem Mac installiert: Als erstes muss sichergestellt werden, dass die SD-Karte im Format MS-DOS (FAT) formatiert ist:  Dafür benutzt man das Festplattendienstprogramm. Dort klickt man auf die SD-Karte an der linken Seite: Wichtig ist, dass man auf die obere klickt, nicht die untere.    
 Jetzt wählt man aus der oberen Leiste Löschen aus und dann einen Namen (Ohne Titel), das Format (MS-DOS-Dateisytem (FAT)), und das Schema (GUID). Nun klickt man auf Löschen. 
 Jetzt merkt man sich die Zahl die unten rechts im Feld Gerät steht: `diskx`.
