@@ -1,9 +1,5 @@
 # Gertboard Tutorial
 
-<h2> 
-Eine Einführung
-</h2>
-
 <ul>
 <li><a href="#1">1. Einleitung</a></li>
 <li><a href="#2">2. Inbetriebnahme des Pi</a></li>
