@@ -35,19 +35,25 @@ Es gibt zwei Betriebssysteme, die Hauptsächlich mit dem Pi benutzt werden. Vor 
 <a id="3">Aufsetzten von Linux</a>
 <h4/>
 
+<p>
 Als erstes muss eine Installationsdatei für Linux heruntergeladen werden, welches [hier](https://downloads.raspberrypi.org/raspbian_latest) verfügbar ist. Das letztendliche Linux nennt sich Raspbian und ist kostenlos. 
 Diese liegt in Form einer einer Zip-Datei, die entpackt werden muss. Anstatt der zip-Datei hat man jetzt eine IMG-Datei. 
 Die Sd-Karte muss nun mit dem Computer verbunden werden, um die IMG-Datei drauf zu spielen. 
+<p/>
 
 <h4>
 Windows 
-Man installiert nun das Program [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/). Die geladene Datei wird anschließend entpackt und ausgeführt. Mit Hilfe des Programmes installiert man Raspian auf dem Pi. 
 <h4/>
+
+<p>
+Man installiert nun das Program [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/). Die geladene Datei wird anschließend entpackt und ausgeführt. Mit Hilfe des Programmes installiert man Raspian auf dem Pi. 
+<p/>
+
 
 <h4>
 Mac
 <h4/>
-
+<p>
 Falls man Raspian mit einem Mac installiert: Als erstes muss sichergestellt werden, dass die SD-Karte im Format MS-DOS (FAT) formatiert ist:  Dafür benutzt man das Festplattendienstprogramm. Dort klickt man auf die SD-Karte an der linken Seite: Wichtig ist, dass man auf die obere klickt, nicht die untere.    
 Jetzt wählt man aus der oberen Leiste Löschen aus und dann einen Namen (Ohne Titel), das Format (MS-DOS-Dateisytem (FAT)), und das Schema (GUID). Nun klickt man auf Löschen. 
 Jetzt merkt man sich die Zahl die unten rechts im Feld Gerät steht: `diskx`.
@@ -55,8 +61,9 @@ Anschließend öffnet man das Terminal (Programme -> Terminal) und gibt den Befe
 Statt `path_of_your_image.img` gibt man den Pfad der IMG Datei ein. Diese kann man aus dem Finder kopieren. Dafür wählt man die IMG-Datei aus und rechts-klickt auf die Datei und wählt Informationen aus. Für *x* setzt man die Zahl aus dem Festpalttendienstprogramm ein und führt den Befehl aus. 
 Schlägt der Befehl fehl, kann man statt `rdisk` auch nur `disk` verwenden.
 Ist der Befehl ausgeführt, kann die SD-Karte ausgeworfen und in den Pi gesteckt werden. 
+<p/>
 
-#### Der erste Start <a name="7"></a>
+<a ref="7">Der erste Star</a>
 Jetzt steckt man die SD-Karte, auf der das Raspbian installiert ist, in den Pi, der über ein Micro-USB-Kabel mit Strom versorgt wird.  
 Nun beginnt der Pi den Startvorgang. In der Zeit sollte man ein LAN-Kabel zur Versorgung mit Internet anschließen. (die Pis der Schule müssen nur angeschlossen werden, sie haben schon Internet. Eigene Pi's müssen erst registriert werden.)
 
