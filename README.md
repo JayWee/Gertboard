@@ -4,18 +4,20 @@
 Eine Einführung
 </h2>
 
-1. **[Einleitung](#1)**  
-1. **[Inbetriebnahme des Pi](#2)**  
-  [Aufsetzten von Linux](#7)  
-  [Aufsetzten von Windows 10 IoT Core](#8)  
-1. **[Erste Programme mit Python über Linux](#3)**  
-1. **[Erste Programme mit C# über Windows](#9)**  
-1. **[Gertboard](#4)**  
-  [Einführung](#5)  
-  [Nutzung der Buffer](#6)  
+<ul>
+<li><a href="#1">1. Einleitung</a></li>
+<li><a href="#2">2. Inbetriebnahme des Pi</a></li>
+<li><a href="#3">3. Aufsetzen von Linux</a></li>
+<li><a href="#4">4. Aufsetzen von Windows 10 IoT Core</a></li>
+<li><a href="#5">5. Erste Programme mit Phyton über Linux</a></li>
+<li><a href="#6">6. Erste Programme mit C# über Windows</a></li>
+<li><a href="#7">7. Gertboard</a></li>
+<li><a href="#8">8. Einführung </a></li>
+<li><a href="#9">9. Nutzung der Buffer </a></li>
+</ul>
 
 <h3>
-<a id="1">1. Einleitun</a>
+<a id="1">1. Einleitung</a>
 </h3>
 
 Der Raspberry Pi ist ein Mini-Computer, der vieles von dem, was ein normaler Computer auch kann: Er hat eine graphische Oberfläche1, einen Internetbrowser und andere Programme. 
@@ -28,7 +30,7 @@ Der Pi besitzt keine eigene interne Festplatte oder sonstigen internen Speicher.
 Es gibt zwei Betriebssysteme, die Hauptsächlich mit dem Pi benutzt werden. Vor allem ist dies Linux (Raspbian), welches eine vollständige Desktopoberfläche hat. Die Alternative ist Windows 10 IoT Core, welches allerding erst mit ab der 2 Version des Pi für diesen verfügbar ist). Dieses Betriebssystem bietet keine graphische Oberfläche, allerdings kann auf alle Funktion über ein anderen Rechner mit Windows zugegriffen werden. Ebenfalls ist es dann möglich mit [Visual Studio 2015 Community](https://www.visualstudio.com/de/), einem Compiler für diverse Sprachen(C/C#/C++/JavaScript/Visual Basic/Phython) von Microsoft, Remote-Debugging zu betreiben.
 
 <h4>
-<a id="7">Aufsetzten von Linux</a>
+<a id="3">Aufsetzten von Linux</a>
 <h4/>
 
 Als erstes muss eine Installationsdatei für Linux heruntergeladen werden, welches [hier](https://downloads.raspberrypi.org/raspbian_latest) verfügbar ist. Das letztendliche Linux nennt sich Raspbian und ist kostenlos. 
