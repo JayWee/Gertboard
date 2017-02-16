@@ -62,52 +62,82 @@ Statt `path_of_your_image.img` gibt man den Pfad der IMG Datei ein. Diese kann m
 Schlägt der Befehl fehl, kann man statt `rdisk` auch nur `disk` verwenden.
 Ist der Befehl ausgeführt, kann die SD-Karte ausgeworfen und in den Pi gesteckt werden. 
 </p>
-
+<h3>
 <a ref="7">Der erste Start</a>
+</h3>
+<p>
 Jetzt steckt man die SD-Karte, auf der das Raspbian installiert ist, in den Pi, der über ein Micro-USB-Kabel mit Strom versorgt wird.  
 Nun beginnt der Pi den Startvorgang. In der Zeit sollte man ein LAN-Kabel zur Versorgung mit Internet anschließen. (die Pis der Schule müssen nur angeschlossen werden, sie haben schon Internet. Eigene Pi's müssen erst registriert werden.)
+</p>
 
 <h4>
 Zugriff auf den Pi 
+</h4>
+<p>
 Der Pi ist nach etwa 2 Minuten bereit um mit ihm zu arbeiten und auf ihn zuzugreifen. Das ist mittels SSH möglich:
 Das Herstellen einer SSH-Verbindung zum Rasperry Pi ist sehr nützlich zum Ausführen von Befehlen. Man kann sich dann das anschließen von Monitor und Tastatur an den Pi sparen und vom eigenem Laptop oder Schulrecher aus den Pi steuern.
+</p>
+
+
+<h4>
+Verbindung aufbauen
 </h4>
 
-##### Verbindung aufbauen
-
-##### Linux, macOS
-
+<h4>
+Linux, macOS
+</h4>
+<p>
 macOS basiert auf Linux und da Linux einen SSH-Klienten mitbringt, gelten diese Schritte auch für macOS.  
 
 Man öffnet das Terminal und führt folgenen Befehlen aus:   
 ssh pi@ip  
-
+</p>
+<p>
 ip ist die Adresse unter der man den Pi erreicht. Man findet sie zuhause über den Router und in der Schule mittels iSurf. 
 Man ist nun auf dem Raspberry Pi eingewehlt und kann Befehle und Programme direkt auf dem Pi ausführen. 
 Falls man die Verbindung beenden möchte, sendet man entweder den Befehl exit oder schließt das Terminal.
+</p>
 
-### Aufsetzten von Windows 10 IoT Core
+<h3>
+Aufsetzten von Windows 10 IoT Core
+</h3>
+<p>
 Windwos 10 Iot Core ist ein kostenloses Betriebssystem für Kleingeräte von Microsoft ohne graphische richtige Oberfläche (es gibt keinen Desktop für klassische Programme, man kann allerdings Netzwerkeinstellungen auch ohne Konsole machen). Im Gegensatz zum normalen Windows ist IoT Core allerdings darauf spezialisiert LEDs, Sensoren und Motoren anzusteuern. Ebenfalls anders ist, das man per Remote Connection einiges mehr machen kann, als über die eigene Oberfläche. Deshalb kann Windows IoT Core auch mit Geräten genutzt werden, die keinen Bildschirmausgang haben.
+</p>
 
-#### Installation auf der SD-Karte
+<h4>
+Installation auf der SD-Karte
+</h4>
+<p>
 Da IoT Core nur  mit Raspberrys ab der zweiten Generation funktioniert, brauch man auf jeden Fall eine microSD-Karte. Diese muss mindestens 8 GB Speicher haben. Die Daten die noch auf dieser sind werden beim Installieren von IoT Core gelöscht. 
 Zum Installieren auf der SD-Karte wird das Programm *[Windows 10 IoT Dashboard](https://developer.microsoft.com/en-us/windows/iot/GetStarted)* benötigt. Die verlinkte Seite enthält ebenfalls eine Anleitung zum Installieren von IoT Core.  
 Nach dem installieren dieses Programms muss es geöffnet werden. Unter Gerätetyp dann den Raspberry auswählen. Bei Betriebssystembuild "Windows 10 IoT Core" ausgewählt lassen und bei Laufwerk die SD-Karte auswählen. (Meistens hat das Programm von vornherein schon das Richtige ausgewählt.) Bei Gerätename kann ein beliebiger Name eingesetzt werden. Mit dem gesetzten Administratorpasswort kann man sich dann per Benutzname "administrator" und dem gewählten passwort einloggen. Zum installieren muss dan noch die Lizenzbedingung akzeptiert werden und dann unten rechts auf den Button gedrückt werden.  
-
-##### Übername von WLAN-Profilen
+</p>
+<h4>
+Übername von WLAN-Profilen
+</h4>
+<p>
 Wenn auf dem Instalierendem Rechner WLAN-Profile bestehen und entweder ein Model ab Stufe 3 des Raspberrys verwendet wird, oder eein WLAN-Adapter per USB verbunden wurde, können diese dann direkt, oben rechts bei der Installation, mit ünernommen werden. So meldet sich der Pi beim ersten mal Booten direkt per WLAN an und es kann dann auch direkt über siese Verbindung auf ihn zugegriffen werden.  
+</p>
 
-#### Zugreifen auf den Pi
-Dafür braucht man wieder das Programm *Windows 10 IoT Dashboard*. In diesem geht man auf den Reiter "*Meine Geräte*". Dort wird der Raspberry dann mit dem gegebenem Namen, seinem Typ und der IP-Adresse angezeigt. 
+<h4>
+Zugreifen auf den Pi
+Dafür braucht man wieder das Programm *Windows 10 IoT Dashboard*. In diesem geht man auf den Reiter "*Meine Geräte*". Dort wird der Raspberry dann mit dem gegebenem Namen, seinem Typ und der IP-Adresse angezeigt.
+</h4>
 
-<!-- To Do: Pronomen ersetzten -->
-## 3. Erste Programme mit Phyton über Linux <a name="3"></a>
+<h2>
+<a name="3">3. Erste Programme mit Phyton über Linux</a>
+</h2>
+<p>
 Es ist nun möglich Programme direkt auf dem Pi zu schreiben in dem man die Programmiersprache Python benutzt. 
 Man kann aber auch auf dem Mac, auf dem man auch das Terminal ausführt, Programme schreiben.
-(Ich empfehle, zum Schreiben von Programmen Xcode zu benutzen, dieses Programm ist kostenfrei im [Mac-AppStore](https://itunes.apple.com/de/app/xcode/id497799835?mt=12) verfügbar. Auch TextWrangler eignet sich, ist aber ein wenig komplizierter.)
+(Ich empfehle, zum Schreiben von Programmen Xcode zu benutzen, dieses Programm ist kostenfrei im <p><a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">MacApp Store</a></p> verfügbar. Auch TextWrangler eignet sich, ist aber ein wenig komplizierter.)
+</p>
 
-  
-### Anlegen eines Dokuments auf dem Pi  
+<h3>  
+Anlegen eines Dokuments auf dem Pi
+</h3>
+
 Man öffnet das Terminal und führt abermals den Befehl ssh pi@ip aus. Nun loggt man sich mit dem Passwort ein und gibt den Befehl nano Test.py ein. Jetzt öffnet sich der Python-Editor, mit dem man die Programme schreiben kann. Jetzt kann man hier den Code eigegben.
 
 ### Das erste Programm 
